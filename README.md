@@ -1,27 +1,18 @@
-# MoviesProject
+# 📽️ Angular Movie App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+Un'applicazione sviluppata in Angular per visualizzare e filtrare un elenco di film tramite una chiamata API esterna.
 
-## Development server
+## 🚀 Funzionalità
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Visualizzazione di un elenco di film
+- Filtro per tipo di film (es. `movie`, `series`, etc.)
+- Ricerca e navigazione ai dettagli del film tramite nome
+- Integrazione con un servizio API REST esterno
+- Comunicazione tra componenti padre-figlio
 
-## Code scaffolding
+## 🔗 API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I dati vengono recuperati dalla seguente API:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Tutti i film: `https://www.apirequest.in/movie/api`
+- Film per nome: `https://www.apirequest.in/movie/api/title/{movieName}`
