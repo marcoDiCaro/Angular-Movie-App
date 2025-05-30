@@ -1,0 +1,99 @@
+.movie-detail {
+  padding: 1.5rem 3rem;
+}
+
+.back {
+  padding: 0.5rem 1rem;
+  width: 5vw;
+  border-radius: 0.5rem;
+  border-style: none;
+  cursor: pointer;
+  box-shadow: 0 0 1rem 0 rgba(1, 5, 35, 0.35);
+  margin-bottom: 2rem;
+  background-color: #1a1a1a;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.back:hover {
+  background-color: #333;
+}
+
+.single-movie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.movie-img {
+  height: 50vh;
+}
+
+.movie-description {
+  color: hsl(0, 0%, 52%);
+  font-size: 1.4rem;
+}
+
+.movie-property {
+  margin-bottom: 1rem;
+}
+
+.description-key,
+.movie-name {
+  color: #ffffff;
+}
+
+/* Tablet (fino a 1024px) */
+@media (max-width: 1024px) {
+  .single-movie {
+    gap: 3rem;
+  }
+
+  .movie-description {
+    font-size: 1.2rem;
+  }
+
+  .movie-img {
+    height: 40vh;
+  }
+}
+
+/* Smartphone (fino a 768px) */
+@media (max-width: 768px) {
+  .movie-detail {
+    padding: 1rem 1.5rem;
+  }
+
+  .single-movie {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .movie-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .back {
+    width: auto;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .movie-description {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smartphone molto piccoli (fino a 480px) */
+@media (max-width: 480px) {
+  .movie-description {
+    font-size: 1rem;
+  }
+
+  .back {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

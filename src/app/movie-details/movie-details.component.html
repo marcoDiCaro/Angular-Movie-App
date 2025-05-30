@@ -1,0 +1,49 @@
+<div *ngIf="movie !== null; else noMovie">
+  <article class="movie-detail">
+    <button class="back" [routerLink]="['/']">Back</button>
+    <div class="single-movie">
+      <img class="movie-img" [src]="movie.Poster" />
+      <div class="movie-description-box">
+        <div class="movie-description">
+          <h2 class="movie-name">{{ movie.title }}</h2>
+          <h2 class="movie-property">
+            <span class="description-key">Anno:</span>
+            {{ movie.year }}
+          </h2>
+          <h2 class="movie-property">
+            <span class="description-key">Durata:</span>
+            {{ movie.runtime }}
+          </h2>
+          <h2 class="movie-property">
+            <span class="description-key">Genere:</span>
+            {{ movie.genre }}
+          </h2>
+          <h2 class="movie-property">
+            <span class="description-key">Regista:</span>
+            {{ movie.director }}
+          </h2>
+          <h2 class="movie-property">
+            <span class="description-key">Attori:</span>
+            {{ movie.actors }}
+          </h2>
+          <h2 class="movie-property">
+            <span class="description-key">Trama:</span>
+            {{ movie.plot }}
+          </h2>
+          <h2 class="movie-property">
+            <span class="description-key">Lingua:</span>
+            {{ movie.language }}
+          </h2>
+          <h2 class="movie-property">
+            <span class="description-key">Metascore:</span>
+            {{ movie.Metascore }}
+          </h2>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<ng-template #noMovie>
+  <p>Nessun Film disponibile.</p>
+</ng-template>

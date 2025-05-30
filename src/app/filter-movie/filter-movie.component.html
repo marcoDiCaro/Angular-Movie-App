@@ -1,0 +1,14 @@
+<div class="filter-box">
+  <label class="search-box">
+    <input
+      (keyup.enter)="searchMovie($event)"
+      class="search-movie"
+      type="search"
+      placeholder="Cerca un film..."
+    />
+  </label>
+  <select class="filter-movie" (change)="changeTypeMovie($event)">
+    <option value="movie">Movie</option>
+    <option value="series">Series</option>
+  </select>
+</div>

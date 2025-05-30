@@ -1,0 +1,30 @@
+<app-filter-movie [movies]="allMovies" (filterEvent)="receiveFilterData($event)"></app-filter-movie>
+<main>
+  <div class="box box-movie" *ngIf="movies?.length; else noMovies">
+    <article class="card" *ngFor="let movie of movies">
+      <img class="card-img" [src]="movie.Poster" />
+      <div class="card-description" [routerLink]="['/movie', movie.title]">
+        <h2 class="movie-name country-property">{{ movie.title }}</h2>
+        <h2 class="country-property">
+          <span class="description-key">Anno:</span>{{ movie.year }}
+        </h2>
+        <h2 class="country-property">
+          <span class="description-key">Regista:</span>{{ movie.director }}
+        </h2>
+        <h2 class="country-property">
+          <span class="description-key">Lingua:</span>{{ movie.language }}
+        </h2>
+        <h2 class="country-property">
+          <span class="description-key">Durata:</span>{{ movie.runtime }}
+        </h2>
+        <h2 class="country-property">
+          <span class="description-key">Tipo:</span>{{ movie.Type }}
+        </h2>
+      </div>
+    </article>
+  </div>
+</main>
+
+<ng-template #noMovies>
+  <p>Nessun Film disponibile.</p>
+</ng-template>

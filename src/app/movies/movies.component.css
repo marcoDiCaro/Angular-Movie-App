@@ -1,0 +1,85 @@
+.box-movie {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  padding: 1.5rem 3rem;
+}
+
+.card,
+.card-img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card {
+  background-color: #2b3945;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+  width: 20vw;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.card-description {
+  padding: 1.5rem;
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.movie-name {
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  letter-spacing: 0.05rem;
+  color: #ffffff;
+}
+
+.description-key {
+  color: #bbbbbb;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+  .box-movie {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .box-movie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .box-movie {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}

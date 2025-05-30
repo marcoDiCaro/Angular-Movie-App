@@ -1,0 +1,65 @@
+.filter-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  margin-bottom: 2rem;
+}
+
+.search-box,
+.filter-movie {
+  background-color: hsl(209, 23%, 22%);
+  padding: 1rem;
+  width: 30%;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0 rgba(1, 5, 35, 0.15);
+}
+
+.search-movie {
+  border-style: none;
+  background-color: hsl(209, 23%, 22%);
+}
+
+.search-movie:focus {
+  color: #fff;
+}
+
+.filter-movie {
+  color: #fff;
+}
+
+/* Tablet (fino a 1024px) */
+@media (max-width: 1024px) {
+  .search-box,
+  .filter-movie {
+    width: 45%;
+  }
+}
+
+/* Smartphone (fino a 768px) */
+@media (max-width: 768px) {
+  .filter-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .search-box,
+  .filter-movie {
+    width: 100%;
+  }
+}
+
+/* Smartphone molto piccoli (fino a 480px) */
+@media (max-width: 480px) {
+  .search-box,
+  .filter-movie {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .search-movie {
+    font-size: 1rem;
+  }
+}
