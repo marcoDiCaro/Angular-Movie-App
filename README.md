@@ -1,3 +1,7 @@
+## Netlify Link
+
+https://angular-movie-app-project.netlify.app/
+
 # 📽️ Angular Movie App
 
 Un'applicazione sviluppata in Angular per visualizzare e filtrare un elenco di film tramite una chiamata API esterna.
