@@ -13,6 +13,7 @@ Un'applicazione sviluppata in Angular per visualizzare e filtrare un elenco di f
 - Ricerca e navigazione ai dettagli del film tramite nome
 - Integrazione con un servizio API REST esterno
 - Comunicazione tra componenti padre-figlio
+- Impaginazione tramite la libreria ngx-pagination
 
 ## 🔗 API
 
