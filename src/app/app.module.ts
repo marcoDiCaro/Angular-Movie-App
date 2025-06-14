@@ -9,6 +9,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FilterMovieComponent } from './filter-movie/filter-movie.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { FilterMovieComponent } from './filter-movie/filter-movie.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

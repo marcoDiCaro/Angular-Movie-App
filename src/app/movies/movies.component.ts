@@ -10,6 +10,8 @@ export class MoviesComponent implements OnInit {
   movies: any[] = []; // Lista Filtrata
   allMovies: any[] = []; //Lista originale
 
+  p: number = 1; // pagina corrente
+
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit(): void {

@@ -1,7 +1,15 @@
-<app-filter-movie [movies]="allMovies" (filterEvent)="receiveFilterData($event)"></app-filter-movie>
+<app-filter-movie
+  [movies]="allMovies"
+  (filterEvent)="receiveFilterData($event)"
+></app-filter-movie>
 <main>
   <div class="box box-movie" *ngIf="movies?.length; else noMovies">
-    <article class="card" *ngFor="let movie of movies">
+    <article
+      class="card"
+      *ngFor="
+        let movie of movies | paginate : { itemsPerPage: 8, currentPage: p }
+      "
+    >
       <img class="card-img" [src]="movie.Poster" />
       <div class="card-description" [routerLink]="['/movie', movie.title]">
         <h2 class="movie-name country-property">{{ movie.title }}</h2>
@@ -24,6 +32,11 @@
     </article>
   </div>
 </main>
+<pagination-controls
+  (pageChange)="p = $event"
+  class="movie-pagination"
+  [autoHide]="true"
+></pagination-controls>
 
 <ng-template #noMovies>
   <p>Nessun Film disponibile.</p>
